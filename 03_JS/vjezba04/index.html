@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predložak zadaci EDUNOVA frontend developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS Varijable i operatori</h1>
+        <header class="header">
+            <p>Otvoriti Developer tools (F12 ili desni klik pa Inspect - provjeri)</p>
+            <p>Odaberite zadatak, unesi vrijednosti A, B, C ili D (ovisno o zadatku) i klikni <strong>Izvrši</strong>.
+            </p>
+        </header>
+
+        <div class="input-grid">
+            <div class="input-group">
+                <label for="valA">Vrijednost A</label>
+                <input type="text" id="valA">
+            </div>
+            <div class="input-group">
+                <label for="valB">Vrijednost B</label>
+                <input type="text" id="valB">
+            </div>
+            <div class="input-group">
+                <label for="valC">Vrijednost C</label>
+                <input type="text" id="valC">
+            </div>
+            <div class="input-group">
+                <label for="valD">Vrijednost D</label>
+                <input type="text" id="valD">
+            </div>
+        </div>
+
+        <div class="controls">
+            <select id="taskSelect">
+                <option selected value="1">1. Zbrajanje brojeva: Zbroji A i B (konverzija u Number)</option>
+                <option value="2">2. Konkatenacija: Spoji A i B kao tekst (String)</option>
+                <option value="3">3. Aritmetika i zagrade: Izračunaj (A + B) * C - D</option>
+                <option value="4">4. Modulo operator: Ostatak pri dijeljenju A s B (A % B)</option>
+                <option value="5">5. Stroga jednakost: Jesu li A i B identični po vrijednosti i tipu (A === B)?</option>
+                <option value="6">6. Relacijski operatori: Je li zbroj A i B veći od umnoška C i D?</option>
+                <option value="7">7. Logički AND (&&): Je li A pozitivno I istovremeno B parno?</option>
+                <option value="8">8. Logički OR (||): Je li barem jedno od polja C ili D prazan string?</option>
+                <option value="9">9. Operator typeof: Ispiši tip podatka za izraz (A * B)</option>
+                <option value="10">10. Ternarni operator: Ako je A > B ispiši vrijednost C, inače ispiši D</option>
+                <option value="11">11. Inkrement / Dekrement: Izračunaj trik izraz (A++ - --B)</option>
+                <option value="12">12. Različito (!= vs !==): Usporedi A i B po vrijednosti (!=) i po tipu (!==)
+                </option>
+                <option value="13">13. Nullish Coalescing (??): Ako je A prazan string, koristi default vrijednost iz B
+                </option>
+                <option value="14">14. Array i Spread operator (...): Spoji [A, B] i [C, D] u jedan novi niz</option>
+                <option value="15">15. Destrukturiranje niza: Iz niza [A, B, C, D] izvuci prva dva elementa u zasebne
+                    varijable i ispiši ih u konzolu</option>
+                <option value="16">16. Rad s objektima: Kreiraj JSON objekt { ime: A, grad: B } i ispiši ga u konzolu
+                </option>
+                <option value="17">17. Optional Chaining (?.): Sigurno pročitaj svojstvo iz ugniježđenog objekta
+                </option>
+                <option value="18">18. Logički NOT (!): Obrni logičku vrijednost provjere (je li A veće od B)</option>
+
+            </select>
+            <button id="btnRun">Izvrši zadatak</button>
+        </div>
+
+        <div class="result-area">
+            <span>Rezultat:</span>
+            <div id="display">---</div>
+        </div>
+    </div>
+    <script src="skripta.js"></script>
+</body>
+
+</html>

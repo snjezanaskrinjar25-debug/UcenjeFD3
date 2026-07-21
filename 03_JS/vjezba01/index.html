@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS hello world</title>
+</head>
+<body>
+
+    <p id="ispis">
+        <!-- Ovo je prazno u HTML-u -->
+    </p>
+
+    <!-- Generiranje elemenata -->
+    <p id="ge">
+
+    </p>
+
+
+    <div
+    onmouseover="this.style.color='red'"
+    onmouseleave="this.style.color='black'"
+    >
+        Tekst u div-u
+    </div>
+
+
+
+    <noscript>
+        <div class="nojs">
+            Vaš preglednik ne podržava Javascript
+        </div>
+    </noscript>
+    
+
+    <script>
+        document.write('Hello world 2')
+
+        console.log('Hello world 3')
+
+        // console.logiraj('Hello world 4') Sintaksna greška: Uncaught TypeError: console.logiraj is not a function
+
+        // console.log(Hello) Sintaksna greška index.html:18 Uncaught ReferenceError: Hello is not defined
+
+        console.log('Hello world 5')
+        
+
+    </script>
+
+    <!-- Učitanje vanjske JS datoteke -->
+    <script src="skripta.js"></script>
+</body>
+</html>
