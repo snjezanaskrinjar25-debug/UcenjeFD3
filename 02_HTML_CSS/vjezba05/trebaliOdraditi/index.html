@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnevnik Gornjeg Grada: Tko pjeva, zlo ne misli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <noscript>
+        <div class="alert-box">Molimo omogućite moderne tehnologije za potpuni doživljaj, iako JS ne koristimo!</div>
+    </noscript>
+
+    <dialog open>
+        <p>Dobrodošli u Zagreb, ljeto 1935.</p>
+    </dialog>
+
+    <div class="paper-container">
+        
+        <header class="main-header">
+            <menu>
+                <li><a href="#film">O Filmu</a></li>
+                <li><a href="#glazba">Glazba</a></li>
+                <li><a href="#spomenar">Spomenar</a></li>
+            </menu>
+            
+            <h1 class="title-anim">Tko pjeva, zlo ne misli</h1>
+            <p class="subtitle">Ljubavna zgoda s mirisom makovnjače</p>
+        </header>
+
+        <main>
+            <section id="film" class="content-block">
+                <p class="intro-text">
+                    Franjo Šafranek je <del>običan činovnik</del> <ins>vitez svog doma</ins>. 
+                    Dok on sanja o <span class="anchor-source">Abesiniji</span>, njegova žena Ana sanja o romantici.
+                </p>
+                
+                <div class="tooltip-anchor">Putovanje avionom!</div>
+
+                <details>
+                    <summary>Klikni za trač o gosponu Fuliru</summary>
+                    <p>Priča se da je fotografirao gđu Anu u Maksimiru bez znanja supruga!</p>
+                </details>
+            </section>
+
+            <section class="shape-section">
+                <object data="https://placehold.co/150x150" type="image/png" class="float-shape">
+                    <img src="https://placehold.co/150x150" alt="Gramofon">
+                </object>
+                <p>
+                    U dvorištu se uvijek čuje pjesma. Zvuk se širi kružno oko gramofona. 
+                    Ovaj tekst demonstrira <code>shape-outside</code> svojstvo koje omogućuje da se tekst 
+                    prelijeva oko kružnog oblika slike, baš kao što se melodija "Marijane" prelijeva 
+                    gornjogradskim dvorištima.
+                </p>
+            </section>
+
+            <section id="glazba" class="media-showcase">
+                <h2>Glazbena Pozadina</h2>
+                
+                <div class="audio-wrapper">
+                    <label>Tko pjeva zlo ne misli</label>
+                    <audio controls src="TkoPjevaZloNeMisli.mp3"></audio>
+                </div>
+
+                <div class="video-frame">
+                    <video controls poster="poster.png">
+                        <source src="VideoTPZNM.mp4" type="video/mp4">
+                        <track kind="subtitles" src="titlovi.vtt" srclang="hr" label="Hrvatski">
+                        Vaš preglednik ne podržava video element.
+                    </video>
+                </div>
+            </section>
+
+            <section class="interactive-map">
+                <h2>Plan Izleta</h2>
+                <map name="maksimir-map">
+                    <area title="Jezero" shape="rect" coords="0,0,100,100" href="#" alt="Jezero">
+                </map>
+
+            
+                    <embed style="width: 100%; height: 400px;" src="https://origo.hr" type="text/plain" title="Prazan embed">
+                
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PQDzrX17v3U?si=uXAxvXHx9AYXLNQj&amp;start=125" title="YouTube video player" style="border: 0px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              
+            </section>
+
+            <section id="spomenar" class="cards-container">
+                
+                <template id="card-template">
+                    <div class="card"><slot name="title"></slot></div>
+                </template>
+
+                <div class="polaroid">
+                    <canvas width="100" height="100"></canvas>
+                    <p>Skica: Perica</p>
+                </div>
+
+                <div class="polaroid move-on-scroll">
+                    <math display="block">
+                        <mrow>
+                            <mi>Ljubav</mi>
+                            <mo>=</mo>
+                            <mi>Fulir</mi>
+                            <mo>+</mo>
+                            <mi>Ana</mi>
+                        </mrow>
+                    </math>
+                    <p>Matematika ljubavi</p>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 1935. - Sva prava pridržana.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD Foundation</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <!-- Početak izbornik -->
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Izbornik</div>
+    </div>
+
+    <div class="top-bar" id="example-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Edunova</li>
+          <li class="has-submenu">
+            <a href="#0">Tehnologije</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="#0">GIT</a></li>
+              <li><a href="#0">HTML &amp; CSS</a></li>
+              <li><a href="#0">RWD</a></li>
+              <li><a href="#0">JS</a></li>
+            </ul>
+          </li>
+          <li><a href="#0">Završni rad</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Kraj izbornik -->
+
+    <!-- Grid sustav -->
+    <div class="grid-x">
+      <div style="background-color: blue;" class="large-4 medium-6 cell">A</div>
+      <div style="background-color: green;" class="large-8 medium-6 cell">B</div>
+      <div style="background-color: red;" class="large-6 cell">C</div>
+      <div style="background-color: purple;" class="large-6 cell">D</div>
+    </div>
+    <!-- Kraj Grid sustav -->
+
+    <!-- Zadatak: Isprobati što veći broj komponenti! -->
+
+    <!-- TABS -->
+    <ul class="tabs" data-tabs id="example-tabs">
+      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+      <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
+      <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
+      <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
+      <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
+      <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="example-tabs">
+      <div class="tabs-panel is-active" id="panel1">
+        <p>One</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel2">
+        <p>Two</p>
+        <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg" alt="">
+      </div>
+      <div class="tabs-panel" id="panel3">
+        <p>Three</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel4">
+        <p>Four</p>
+        <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg" alt="">
+      </div>
+      <div class="tabs-panel" id="panel5">
+        <p>Five</p>
+        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+      </div>
+      <div class="tabs-panel" id="panel6">
+        <p>Six</p>
+        <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg" alt="">
+      </div>
+    </div>
+    <!-- Kraj TABS -->
+  </div>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

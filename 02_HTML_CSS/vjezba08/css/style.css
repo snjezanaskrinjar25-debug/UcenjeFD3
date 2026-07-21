@@ -1,0 +1,17 @@
+body{
+    background-color: antiquewhite;
+    background-image: url('../img/Slika5.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Edunova' /* Ovdje dajemo svoje ime fontu */;
+    src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2');
+}
+
+h1{
+    font-family: 'Edunova', 'Arial', sans-serif; /* font fallback */
+}

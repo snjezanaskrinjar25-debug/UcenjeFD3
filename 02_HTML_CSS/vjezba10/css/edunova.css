@@ -1,0 +1,10 @@
+.brand .logo { 
+    border-radius: 20px;
+    background: #f0f;
+}
+
+div.s-cover-meta a{
+    font-family: var(--font-mono);
+    color: var(--ink-3);
+    text-decoration: none;
+}

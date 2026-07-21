@@ -1,0 +1,239 @@
+:root {
+    --osijek-blue: #00539C;
+    --osijek-white: #FFFFFF;
+    --text-dark: #333;
+    --gap-std: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; 
+    overflow-y: scroll;
+    overflow-anchor: none;
+}
+
+header {
+    background-color: var(--osijek-blue);
+    color: var(--osijek-white);
+    padding: 1rem;
+    position: relative; 
+    z-index: 10;
+}
+
+.header-decoration {
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+    inset: 5px;
+    inset-block: 10px; 
+    inset-block-start: 5px;
+    inset-block-end: 5px;
+    inset-inline: 20px;
+    inset-inline-start: 10px;
+    inset-inline-end: auto;
+    pointer-events: none;
+}
+
+hgroup {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    padding: 0.5rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+nav li:last-child {
+    order: -1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+search {
+    display: flex;
+    align-self: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    min-height: 80vh;
+
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: auto auto 1fr;
+    
+    grid-template-areas: 
+        "intro intro intro"
+        "sidebar content ads"
+        "footer footer footer";
+    
+    gap: 20px;
+    column-gap: 30px;
+    row-gap: 20px;
+
+    align-content: start;
+    justify-content: center;
+    place-content: start center;
+}
+
+#intro {
+    grid-area: intro;
+    background: white;
+    padding: 20px;
+    border-bottom: 3px solid var(--osijek-blue);
+    
+    justify-self: stretch;
+    align-self: start;
+    place-self: start stretch;
+}
+
+article {
+    grid-area: content;
+    background: white;
+    padding: 25px;
+    
+    overflow-block: visible;
+    overflow-inline: hidden;
+    overflow-wrap: break-word;
+}
+
+.article-text {
+    columns: 200px 2;
+    column-count: 2;
+    column-width: 200px;
+    column-gap: 40px;
+    column-rule: 2px solid #ccc;
+    column-rule-color: var(--osijek-blue);
+    column-rule-style: dotted;
+    column-rule-width: 1px;
+    column-fill: balance;
+    
+    orphans: 3;
+    widows: 3;
+    
+    text-align: justify;
+}
+
+.highlight-box {
+    break-inside: avoid;
+    break-after: always;
+    break-before: auto;
+    background: #eef;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.float-img {
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+h2 span {
+    column-span: all;
+    display: block;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+aside {
+    grid-area: sidebar;
+    background: #f9f9f9;
+    padding: 15px;
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: minmax(50px, auto);
+    grid-auto-columns: 100%;
+    
+    justify-items: center;
+    align-items: center;
+    place-items: center;
+}
+
+.program-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    overflow-clip-margin: 10px; 
+}
+
+#ads {
+    grid-area: ads;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.ad-banner {
+    background-color: #ffe082;
+    padding: 20px;
+    position: sticky;
+    top: 20px; 
+    left: 0;
+    right: 0;
+    bottom: auto;
+}
+
+footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    
+    page: footerPage;
+}
+
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+@page footerPage {
+    margin-top: 5cm;
+}

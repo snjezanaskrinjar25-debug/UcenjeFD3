@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice i forme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <table>
+        <caption>Pantone boje godine</caption>
+        <colgroup>
+            <col style="width: 10%;">
+            <col style="width: 70%;">
+            <col style="width: 20%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Godina</th>
+                <th>Ime boje</th>
+                <th>HEX</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026</td>
+                <td>Cloud dancer</td>
+                <td>#f0f1f0</td>
+            </tr>
+            <tr>
+                <td>2025</td>
+                <td>Mocha Mousse</td>
+                <td>#a47864</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>Peach Fuzz</td>
+                <td>#ffbe98</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">spojene kolone</td>
+                <td rowspan="2">spojeni redovi</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <form action="https://origo.hr" method="get">
+        <fieldset>
+            <legend>Podaci o osiguraniku</legend>
+
+            <input type="text" name="ime" id="ime" placeholder="Unesi ime">
+
+            <hr>
+
+            <label for="online">Online</label>
+            <input type="radio" name="nacin" id="online" value="online">
+
+            <hr>
+
+            <label for="neposredno">Neposredno</label>
+            <input type="radio" name="nacin" id="neposredno" value="neposredno">
+
+            <hr>
+
+            <input type="password" name="lozinka" id="lozinka" placeholder="lozinka">
+
+            <hr>
+
+            <button>Pošalji</button>
+
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>

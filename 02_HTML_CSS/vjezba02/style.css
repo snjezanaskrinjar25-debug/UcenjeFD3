@@ -1,0 +1,40 @@
+:root{
+    --primarna-boja: #2c3e50;
+    --pozadina: #ecf0f1;
+    --pozadina-container: #f5f2f2;
+}
+
+body{
+    background-color: var(--pozadina);
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    outline-style: solid;
+    outline-width: 2px;
+    /* outline-offset: 10px; */
+    outline-color: var(--primarna-boja);
+    background-color: var(--pozadina-container);
+    /* padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-bottom: 4rem; */
+    /* gore desno dolje lijevo*/
+    /* padding: 1rem 1rem 1rem 1rem; */
+    /* gore/dolje lijevo/desno */
+    padding: 1rem 2rem;
+    padding: 1rem;
+}
+
+h1{
+    font-family: monospace;
+    text-align: center;
+}
+
+#lista{
+    border: 2px solid var(--primarna-boja);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 2rem;
+}

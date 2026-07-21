@@ -1,0 +1,238 @@
+/* -----------------------------------------------------------
+    OSNOVNA I RESET CSS SVOJSTVA
+----------------------------------------------------------- */
+:root {
+    --primary-bg: #f9f9f9;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding: 20px;
+    
+    /* CSS: counter-reset, quotes */
+    counter-reset: section-counter;
+    quotes: "«" "»";
+}
+
+h2::before {
+    /* CSS: counter-increment, content (implicitno za counter) */
+    counter-increment: section-counter;
+    content: "Sekcija " counter(section-counter) ": ";
+    color: #666;
+}
+
+/* CSS: all (resetira sve na gumbu za resetiranje) */
+.reset-btn {
+    all: unset; 
+    border: 1px solid red;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------
+    TABLICA (TABLE) CSS SVOJSTVA
+----------------------------------------------------------- */
+table {
+    width: 100%;
+    margin-bottom: 2rem;
+    /* CSS: border-collapse, border-spacing, table-layout */
+    border-collapse: separate; 
+    border-spacing: 0;
+    table-layout: fixed;
+    /* CSS: empty-cells */
+    empty-cells: hide;
+}
+
+caption {
+    /* CSS: caption-side */
+    caption-side: bottom;
+    font-style: italic;
+    padding: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* CSS: user-select (sprječava odabir teksta u zaglavlju) */
+th {
+    user-select: none; 
+    background-color: #333;
+    color: #fff;
+}
+
+/* -----------------------------------------------------------
+    FORMA (FORM) CSS SVOJSTVA
+----------------------------------------------------------- */
+fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* CSS: appearance (uklanja zadani stil) */
+select {
+    appearance: none; 
+    padding: 8px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: white;
+    /* CSS: cursor */
+    cursor: pointer;
+}
+
+/* CSS: accent-color (boja checkboxa/radio gumba/range-a) */
+input[type="checkbox"], input[type="range"] {
+    accent-color: #ff6f61; /* Living Coral */
+}
+
+/* CSS: caret-color (boja kursora za pisanje) */
+input[type="text"], textarea {
+    caret-color: #663399; /* Ultra Violet */
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    /* CSS: field-sizing (automatska visina prema sadržaju), resize */
+    field-sizing: content; 
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* CSS: touch-action (manipulacija dodirom na range slideru) */
+input[type="range"] {
+    touch-action: pan-y;
+    width: 100%;
+}
+
+/* CSS: pointer-events (onemogućuje klikove na ukrasni label) */
+.decorative-label {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* CSS: counter-set (primjer postavljanja brojača) */
+.step-indicator {
+    counter-set: step-counter 1; 
+}
+
+/* -----------------------------------------------------------
+    SVG GRAFIKA - GEOMETRIJA I STILOVI
+----------------------------------------------------------- */
+svg {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* CSS: Geometrija u CSS-u (d, cx, cy, r, rx, ry, x, y) */
+.my-path {
+    /* d: putanja definira oblik vala */
+    d: path("M 10 80 Q 50 10 90 80 T 170 80");
+    /* fill, stroke, stroke-width su standardni */
+    fill: none;
+    stroke: #0f4c81; /* Classic Blue */
+    stroke-width: 4px;
+    
+    /* CSS: vector-effect (linija ostaje ista pri skaliranju) */
+    vector-effect: non-scaling-stroke;
+
+    /* CSS: marker, marker-start, marker-mid, marker-end */
+    marker-start: url(#circleMarker);
+    marker-end: url(#arrowMarker);
+}
+
+.my-rect {
+    /* x, y, rx, ry definirani u CSS-u umjesto u HTML-u */
+    x: 200px;
+    y: 20px;
+    rx: 10px;
+    ry: 10px;
+    width: 100px; /* mora biti definirano za rect */
+    height: 100px;
+
+    /* CSS: fill-opacity, stroke-opacity */
+    fill: #939597; /* Ultimate Gray */
+    fill-opacity: 0.5;
+    stroke: #F5DF4D; /* Illuminating */
+    stroke-width: 5;
+    stroke-opacity: 0.8;
+
+    /* CSS: paint-order (redoslijed crtanja: fill, stroke, markers) */
+    paint-order: stroke fill;
+}
+
+.my-circle {
+    /* cx, cy, r definirani u CSS-u */
+    cx: 350px;
+    cy: 70px;
+    r: 30px;
+
+    /* CSS: lighting-color, flood-color, flood-opacity (za filtere) */
+    filter: url(#shadowFilter);
+    fill: green; /* Viva Magenta */
+}
+
+.dashed-line {
+    stroke: #666;
+    stroke-width: 2;
+    /* CSS: stroke-dasharray, stroke-dashoffset */
+    stroke-dasharray: 10, 5;
+    stroke-dashoffset: 2;
+    
+    /* CSS: stroke-linecap, stroke-linejoin, stroke-miterlimit */
+    stroke-linecap: round;
+    stroke-linejoin: bevel;
+    stroke-miterlimit: 10;
+}
+
+.text-label {
+    font-size: 14px;
+    font-family: sans-serif;
+    /* CSS: alignment-baseline, dominant-baseline */
+    alignment-baseline: middle;
+    dominant-baseline: central;
+}
+
+.gradient-stop-1 {
+    /* CSS: stop-color, stop-opacity */
+    stop-color: #FF6F61;
+    stop-opacity: 1;
+}
+
+.gradient-stop-2 {
+    /* CSS: color-interpolation */
+    stop-color: #663399;
+    stop-opacity: 0.5;
+    color-interpolation: sRGB;
+}
+
+/* CSS: shape-rendering (optimizacija renderiranja) */
+.crisp-edges {
+    shape-rendering: crispEdges;
+}
+
+/* CSS: fill-rule (određuje kako se popunjavaju rupe u obliku) */
+.complex-shape {
+    fill-rule: evenodd;
+    fill: teal;
+}
+
+/* Filter efekti unutar SVG-a */
+#floodFilter {
+        /* CSS: flood-color, flood-opacity, color-interpolation-filters */
+    flood-color: lime;
+    flood-opacity: 0.3;
+    color-interpolation-filters: linearRGB;
+}

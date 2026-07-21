@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edunova Frontend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/edunova.css">
+</head>
+<!--
+  Lustro Slideshow
+  https://templatemo.com/tm-624-lustro-slideshow
+-->
+
+<body>
+
+  <div class="brand">
+    <span class="logo"></span> Edunova frontend
+  </div>
+
+  <div class="section-tag"><span class="pip"></span><span id="sectionName">Naslovnica</span></div>
+
+
+  <div class="deck" id="deck">
+
+    <!-- ============ 1. COVER ============ -->
+    <section class="slide active" data-section="Naslovnica" data-sub="Uvod u nastavu">
+      <div class="slide-inner s-cover">
+        <div class="s-cover-inner">
+          <div class="s-cover-glow"></div>
+          <div class="eyebrow reveal"><span class="dt"></span>Grupa FD3</div>
+          <h1 class="h-display">
+            <span class="line"> HTML, CSS</span>
+            <span class="line">JS, REACT</span>
+          </h1>
+
+          <div class="s-cover-meta reveal">
+            21. svibnja, 2026<span class="sep"></span>
+            Prema <a href="https://origo.hr/PLANnastaveFD3.html" target="_blank">rasporedu</a>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- ============ 8. MORE FROM TEMPLATEMO (NEW) ============ -->
+    <section class="slide" data-section="Galerija" data-sub="Slike zaslona onoga što radimo">
+      <div class="slide-inner s-more">
+        <div class="s-more-head">
+          <div class="sm-l">
+            <div class="eyebrow reveal"><span class="dt"></span>Pogledajte što radimo</div>
+            <h2 class="h-display reveal">Korištene <span class="grd">Tehnologije</span>.</h2>
+          </div>
+        </div>
+        <div class="more-grid">
+          <a class="more-card glass-card" href="#" 
+            rel="nofollow noopener">
+            <div class="mc-thumb"><img src="images/html.png" alt="Slika HTML oznaka"
+                loading="lazy"></div>
+            <div class="mc-body">
+             
+              <div class="mc-title">HTML</div>
+              <div class="mc-desc">Označiteljski jezik</div>
+              
+            </div>
+          </a>
+          <a class="more-card glass-card" href="#" 
+            rel="nofollow noopener">
+            <div class="mc-thumb"><img src="images/css.png" alt="Slika CSS selektora i stilova"
+                loading="lazy"></div>
+            <div class="mc-body">
+             
+              <div class="mc-title">CSS</div>
+              <div class="mc-desc">CSS je stilski jezik</div>
+            </div>
+          </a>
+          <a class="more-card glass-card" href="#" 
+            rel="nofollow noopener">
+            <div class="mc-thumb"><img src="images/uskoro.jpg" alt="Uskoro"
+                loading="lazy"></div>
+            <div class="mc-body">
+              <div class="mc-title">JS</div>
+              <div class="mc-desc">[Uskoro] JS je programski jezik</div>
+            </div>
+          </a>
+          <a class="more-card glass-card" href="#" 
+            rel="nofollow noopener">
+            <div class="mc-thumb"><img src="images/uskoro.jpg" alt="Uskoro"
+                loading="lazy"></div>
+            <div class="mc-body">
+              <div class="mc-title">REACT</div>
+              <div class="mc-desc">[Uskoro] React je razvojno okruženje mrežnih aplikacija</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9. CTA ============ -->
+    <section class="slide" data-section="Kreni" data-sub="Prihvati izazov">
+      <div class="slide-inner s-cta">
+        <div class="s-cta-inner">
+          <div class="s-cta-glow"></div>
+          <h2 class="h-display">
+            <span class="mw"><span>Upiši <span class="grd">Frontend u Edunovi</span></span></span>
+          </h2>
+      
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- POPUP MENU -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel" role="dialog" aria-label="Slide navigation">
+    <div class="menu-header">
+      <h3>Prijeđi na</h3>
+      <div class="menu-meta"><span id="menuCurr">01</span> / <span id="menuTotal">09</span></div>
+    </div>
+    <div class="menu-list" id="menuList"></div>
+    
+  </div>
+
+  <!-- NAV: prev | menu | counter | next -->
+  <div class="nav">
+    <button id="prev" aria-label="Previous slide">&larr;</button>
+    <button id="menuBtn" class="menu-btn" aria-label="Open slide menu"><span
+        class="icon"><i></i><i></i><i></i></span></button>
+    <div class="counter"><span id="curr">01</span> / <span id="total">09</span></div>
+    <button id="next" aria-label="Next slide">&rarr;</button>
+  </div>
+
+  <script src="js/skripta.js"></script>
+
+</body>
+
+</html>
