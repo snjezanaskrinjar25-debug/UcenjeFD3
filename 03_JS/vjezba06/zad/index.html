@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predložak zadaci EDUNOVA frontend developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Predložak zadaci EDUNOVA frontend developer</h1>
+        <h2>Otvoriti Developer tools (F12 ili desni klik pa Inspect - provjeri)</h2>
+        <p>Odaberite zadatak, unesi vrijednosti A i klikni <strong>Izvedi</strong>.</p>
+      </header>
+
+      <section class="card">
+
+         <div class="controls">
+          <label class="selectWrap">
+            <span>Odaberi zadatak</span>
+            <select id="zadatak">
+              <option value="1">1. Naziv akcije</option>
+              <option value="2">2. Položio/Ne položio</option>
+              <option value="3">3. Ocjena prema bodovima</option>
+              <option value="4">4. Vrsta hrane</option>
+            </select>
+          </label>
+
+         
+        </div>
+
+        <div class="grid">
+          <label class="field">
+            <span>A</span>
+            <input id="inputA" type="text" />
+          </label>
+        </div>
+        <hr>
+        <div class="grid">
+        <button id="izvedi" class="btn" type="button">Izvedi</button>
+        </div>
+        
+       
+      </section>
+
+      <section class="resultCard">
+        <h2>Rezultat</h2>
+        <div id="rezultat" class="result" aria-live="polite">—</div>
+      </section>
+
+      <footer class="footer">
+        <small>Predložak zadaci EDUNOVA frontend developer</small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
